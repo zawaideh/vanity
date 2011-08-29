@@ -13,6 +13,7 @@ require "phusion_passenger/events"
 require "vanity"
 require "timecop"
 require "webmock/test_unit"
+require "ruby-debug"
 
 
 if $VERBOSE
