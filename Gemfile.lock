@@ -150,6 +150,7 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
+  SystemTimer (= 1.2.3)
   bson_ext
   garb
   jekyll
