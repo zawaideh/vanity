@@ -48,7 +48,7 @@ module Vanity
       # Generate an HTML report.  Outputs to the named file, or stdout with no
       # arguments.
       def report(output = nil)
-        html = render(Vanity.template("report"))
+        html = render(Vanity.template("report"), handlers: ['erb'])
         if output
           File.open output, 'w' do |file|
             file.write html
