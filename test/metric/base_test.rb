@@ -243,7 +243,11 @@ end
 context "Metric data" do
   test "explicit dates" do
     metric "Yawns/sec"
-    Timecop.freeze(today - 4) { Vanity.playground.track! :yawns_sec, 4 }
+    puts ""
+    puts "today:     #{today}"
+    puts "today - 4: #{today - 4}"
+    puts "today - 2: #{today - 2}"
+    Timecop.freeze((today - 4).to_time) { Vanity.playground.track! :yawns_sec, 4 }
     Timecop.freeze(today - 2) { Vanity.playground.track! :yawns_sec, 2 }
     Vanity.playground.track! :yawns_sec
     boredom = Vanity::Metric.data(Vanity.playground.metric(:yawns_sec), Date.today - 5, Date.today)

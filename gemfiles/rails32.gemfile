@@ -14,7 +14,7 @@ gem "shoulda"
 gem "timecop"
 gem "webmock"
 gem "SystemTimer", "1.2.3", :platforms=>:mri_18
-gem "rails", "3.2.1"
+gem "rails", "3.2.13"
 gem "passenger", "~>3.0"
 
 gemspec :path=>"../"
