@@ -146,7 +146,7 @@ module Vanity
       # Filter to track metrics
       # pass _track param along to call track! on that alternative
       def vanity_track_filter
-        if request.get? && params[:_track]
+        if request.get? && request.format == "text/html" && params[:_track]
           track! params[:_track]
         end
       end
